@@ -1,0 +1,9 @@
+services: # list of the different apps
+  server: # name for the service
+    build: ./server # location of the Dockerfile
+    ports:
+      - 3000:3000 # Port to publish, similar to 'docker run -p 3000:3000'
+  client:
+    build: ./client # location of Dockerfile for angular
+    ports:
+      - 1234:1234
